@@ -1,3 +1,4 @@
+import httpx
 import requests
 
 from reservamos.settings import API_KEY_OPEN_WEATHER
@@ -19,7 +20,8 @@ class OpenWeatherWeatherAPI(WeatherAPI):
             'appid': self.api_key
         }
 
-        response = requests.get(self.url, params=params)
+        async with httpx.AsyncClient() as client:
+            response = await client.get(self.url, params=params)
 
         if response.status_code == 200:
             data = response.json()
