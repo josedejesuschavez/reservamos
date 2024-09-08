@@ -1,3 +1,4 @@
+import asyncio
 import requests
 
 from reservamos.settings import API_KEY_OPEN_WEATHER
@@ -14,7 +15,8 @@ class OpenWeatherWeatherAPI(WeatherAPI):
         params = {
             'lat': lat,
             'lon': lon,
-            'exclude': 'daily',
+            'exclude': 'current,minutely,hourly,alerts',
+            'units': 'metric',
             'appid': self.api_key
         }
 
