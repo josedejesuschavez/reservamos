@@ -8,3 +8,11 @@ services:
       - "8000:8000"
     volumes:
       - ./reservamos:/code
+  jupyter-notebook:
+    image: jupyter/minimal-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./reservamos:/home/jovyan
+    environment:
+      - JUPYTER_TOKEN=mi_token_secreto
