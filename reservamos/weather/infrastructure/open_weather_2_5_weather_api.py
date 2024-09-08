@@ -1,5 +1,4 @@
 import httpx
-import requests
 
 from reservamos.settings import API_KEY_OPEN_WEATHER
 from weather.domain.weather_api import WeatherAPI

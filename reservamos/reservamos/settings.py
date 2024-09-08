@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -121,4 +122,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-API_KEY_OPEN_WEATHER = 'a5a47c18197737e8eeca634cd6acb581'
+API_KEY_OPEN_WEATHER = 'd195579af14bec1b0ecc13a5d044e19e'
