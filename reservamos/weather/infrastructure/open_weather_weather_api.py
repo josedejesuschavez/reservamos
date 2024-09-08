@@ -1,4 +1,3 @@
-import asyncio
 import requests
 
 from reservamos.settings import API_KEY_OPEN_WEATHER
@@ -11,7 +10,7 @@ class OpenWeatherWeatherAPI(WeatherAPI):
         self.url = 'https://api.openweathermap.org/data/2.5/onecall'
         self.api_key = API_KEY_OPEN_WEATHER
 
-    def get_weathers_by_lat_and_lon(self, lat: float, lon: float):
+    async def get_weathers_by_lat_and_lon(self, lat: float, lon: float):
         params = {
             'lat': lat,
             'lon': lon,
