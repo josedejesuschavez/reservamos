@@ -17,36 +17,37 @@ class GetWeatherByName:
 
         places = self.places_api.get_place_by_name(name=name)
 
-        if len(places) > 0:
-            tasks_get_weathers = []
-            lat = places[0]['lat']
-            lon = places[0]['long']
+        tasks_get_weathers = []
+        for place in places:
+            lat = place['lat']
+            lon = place['long']
 
             tasks_get_weathers.append(self.weather_api.get_weathers_by_lat_and_lon(lat=lat, lon=lon))
+            break
 
-            weathers = await asyncio.gather(*tasks_get_weathers)
+        weathers = await asyncio.gather(*tasks_get_weathers)
 
-            for place, weathers_current_place in zip(places, weathers):
-                weathers_current_place_data = []
+        for place, weathers_current_place in zip(places, weathers):
+            weathers_current_place_data = []
 
-                if weathers_current_place and weathers_current_place.get('daily'):
-                    for weather_current_place in weathers_current_place['daily']:
-                           weather_current_place = {
-                               'dt': weather_current_place['dt'],
-                               'temp_min': weather_current_place['temp']['min'],
-                               'temp_max': weather_current_place['temp']['max'],
-                           }
-                           weathers_current_place_data.append(weather_current_place)
+            if weathers_current_place and weathers_current_place.get('daily'):
+                for weather_current_place in weathers_current_place['daily']:
+                    weather_current_place = {
+                        'dt': weather_current_place['dt'],
+                        'temp_min': weather_current_place['temp']['min'],
+                        'temp_max': weather_current_place['temp']['max'],
+                    }
+                    weathers_current_place_data.append(weather_current_place)
 
-                place_data = {
-                    'city_name': place['city_name'],
-                    'display': place['display'],
-                    'sort_criteria': place['sort_criteria'],
-                    'weather': weathers_current_place_data,
-                }
-                response.append(place_data)
+            place_data = {
+                'city_name': place['city_name'],
+                'display': place['display'],
+                'sort_criteria': place['sort_criteria'],
+                'weather': weathers_current_place_data,
+            }
+            response.append(place_data)
 
-            end_time = time.time()
-            elapsed_time = end_time - start_time
-            print(f"Tiempo de ejecución: {elapsed_time} segundos")
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        print(f"Tiempo de ejecución: {elapsed_time} segundos")
         return response
