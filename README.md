@@ -1,7 +1,7 @@
 # Documentación de Reservamos
 
-1. [Levantar el proyecto el local si se tiene docker](#id1)
-2. [Segundo apartado](#id2)
+1. [Levantar el proyecto el local si se tiene docker](#levantar-el-proyecto-si-se-tiene-docker)
+2. [Segundo apartado](#levantar-el-proyecto-si-se-tiene-docker)
 
 ## Levantar el proyecto si se tiene docker<a name="id1"></a>
 Texto del primer apartado
