@@ -1,13 +1,11 @@
-import asyncio
 import pytest
 
 from weather.application.get_weather_by_name import GetWeatherByName
 from weather.domain.places_api import PlacesAPI
 from weather.domain.weather_api import WeatherAPI
-from weather.infrastructure.reservamos_places_api import ReservamosPlacesApi
 
 
-class PlacesAPITest(PlacesAPI):
+class PlacesAPITestSuccess(PlacesAPI):
 
     def get_place_by_name(self, name):
         return [
@@ -17,8 +15,13 @@ class PlacesAPITest(PlacesAPI):
              'result_type': 'city', 'popularity': '0.365111433802639', 'sort_criteria': 0.7460445735210556}
         ]
 
+class PlacesAPITestError(PlacesAPI):
 
-class WeatherAPITest(WeatherAPI):
+    def get_place_by_name(self, name):
+        return None
+
+
+class WeatherAPITestSuccess(WeatherAPI):
 
     async def get_weathers_by_lat_and_lon(self, lat: float, lon: float):
         return {
@@ -95,11 +98,33 @@ class WeatherAPITest(WeatherAPI):
             ]
         }
 
+class WeatherAPITestError(WeatherAPI):
+
+    async def get_weathers_by_lat_and_lon(self, lat: float, lon: float):
+        return None
+
 
 @pytest.mark.asyncio
 async def test_happy_path():
     name = 'monterrey'
-    use_case = GetWeatherByName(places_api=PlacesAPITest(), weather_api=WeatherAPITest())
+    use_case = GetWeatherByName(places_api=PlacesAPITestSuccess(), weather_api=WeatherAPITestSuccess())
 
     result = await use_case.execute(name=name)
     assert result == [{'city_name': 'Monterrey', 'display': 'Monterrey', 'sort_criteria': 0.7460445735210556, 'weather': [{'dt': 1618308000, 'temp_min': 275.09, 'temp_max': 284.07}]}]
+
+@pytest.mark.asyncio
+async def test_not_return_data_places_api():
+    name = 'monterrey'
+    use_case = GetWeatherByName(places_api=PlacesAPITestError(), weather_api=WeatherAPITestSuccess())
+
+    result = await use_case.execute(name=name)
+    assert result == []
+
+
+@pytest.mark.asyncio
+async def test_not_return_data_weather_api():
+    name = 'monterrey'
+    use_case = GetWeatherByName(places_api=PlacesAPITestSuccess(), weather_api=WeatherAPITestError())
+
+    result = await use_case.execute(name=name)
+    assert result == [{'city_name': 'Monterrey', 'display': 'Monterrey', 'sort_criteria': 0.7460445735210556, 'weather': []}]
