@@ -10,5 +10,7 @@ __pycache__/
 .local/
 .npm/
 
+venv
+
 .jupyter/
 .cache/
