@@ -50,7 +50,8 @@ Retorna el lugar con mejor match
 
 ### Ejemplo de Solicitud:
 ```bash
-curl -X GET "http://localhost:8000/api/weathers/?name=mon"```
+curl -X GET "http://localhost:8000/api/weathers/?name=mon"
+```
 
 ## Mejoras de performance
 
