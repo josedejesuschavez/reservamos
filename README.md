@@ -33,12 +33,24 @@
 `pytest`
 
 ## Endpoints disponibles
-`Retorna los lugares que tuvieron match
-http://localhost:8000/api/weathers/?name=mon`
 
-`Retorna el lugar con mejor match
-http://localhost:8000/api/weather/?name=mon`
+### Descripción:
+Retorna los lugares que tuvieron match
 
+### Endpoint
+`GET http://localhost:8000/api/weathers/?name=mon`
+
+
+### Descripción:
+Retorna el lugar con mejor match
+
+### Endpoint
+`GET http://localhost:8000/api/weather/?name=mon`
+
+
+### Ejemplo de Solicitud:
+```bash
+curl -X GET "http://localhost:8000/api/weathers/?name=mon"```
 
 ## Mejoras de performance
 
