@@ -9,11 +9,15 @@
    - [Obtener el lugar con mejor match](#Obtener-el-lugar-con-mejor-match)
 6. [Mejoras de performance](#Mejoras-de-performance)
 
-## Modificar API Key del proyecto
+---
+
+## 1. Modificar API Key del proyecto
 Se tiene que modificar el archivo settings.py y buscar la siguiente variable y cambiarla por tu API Key
 ```API_KEY_OPEN_WEATHER = 'a5a47c18197737e8eeca634cd6acb581'```
 
-## Levantar el proyecto si se tiene docker
+---
+
+## 2. Levantar el proyecto si se tiene docker
 
 #### Si se tiene docker instalado en la maquina se puede ejecutar con el siguiente comando:
 `docker compose up --build`
@@ -21,8 +25,9 @@ Se tiene que modificar el archivo settings.py y buscar la siguiente variable y c
 #### Si se tiene docker instalado y la posibilidad de ejecutar makefiles
 `make build`
 
+---
 
-## Levantar el proyecto usando virtualenv
+## 3. Levantar el proyecto usando virtualenv
 
 #### 1. Se tiene que crear el virtualenv con el siguiente comando
 `python3 -m venv venv`
@@ -36,10 +41,14 @@ Se tiene que modificar el archivo settings.py y buscar la siguiente variable y c
 #### 4. Nos metemos a la carpeta reservamos y se debe de encontrar el archivo manage.py y lo ejecutamos
 `python manage.py runserver`
 
-## Ejecucion de todas las pruebas unitarias
+---
+
+## 4. Ejecucion de todas las pruebas unitarias
 `pytest`
 
-## Endpoints disponibles
+---
+
+## 5. Endpoints disponibles
 
 ## Obtener varios lugares con match
 ### Descripción:
@@ -66,7 +75,7 @@ Retorna el lugar con mejor match
 curl -X GET "http://localhost:8000/api/weather/?name=mon"
 ```
 
-## Mejoras de performance
+## 6. Mejoras de performance
 
 #### Tiempo de ejecución sin metodos asincronos.
 `13.45 segundos`
