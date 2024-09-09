@@ -40,6 +40,10 @@ Retorna los lugares que tuvieron match
 ### Endpoint
 `GET http://localhost:8000/api/weathers/?name=mon`
 
+### Ejemplo de Solicitud:
+```bash
+curl -X GET "http://localhost:8000/api/weathers/?name=mon"
+```
 
 ### Descripción:
 Retorna el lugar con mejor match
@@ -50,7 +54,7 @@ Retorna el lugar con mejor match
 
 ### Ejemplo de Solicitud:
 ```bash
-curl -X GET "http://localhost:8000/api/weathers/?name=mon"
+curl -X GET "http://localhost:8000/api/weather/?name=mon"
 ```
 
 ## Mejoras de performance
