@@ -3,7 +3,8 @@
 1. [Levantar el proyecto el local si se tiene docker](#levantar-el-proyecto-si-se-tiene-docker)
 2. [Levantar el proyecto usando virtualenv](#Levantar-el-proyecto-usando-virtualenv)
 3. [Ejecucion_de_pruebas_unitarias](#Ejecucion-de-pruebas-unitarias)
-4. [Mejoras_de_performance](#Mejoras-de-performance)
+4. [Endpoints_disponibles](#Endpoints-disponibles)
+5. [Mejoras_de_performance](#Mejoras-de-performance)
 
 ## Levantar el proyecto si se tiene docker
 
@@ -30,6 +31,14 @@
 
 ## Ejecucion de todas las pruebas unitarias
 `pytest`
+
+## Endpoints disponibles
+`Retorna los lugares que tuvieron match
+http://localhost:8000/api/weathers/?name=mon`
+
+`Retorna el lugar con mejor match
+http://localhost:8000/api/weather/?name=mon`
+
 
 ## Mejoras de performance
 
