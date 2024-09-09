@@ -2,6 +2,8 @@
 
 1. [Levantar el proyecto el local si se tiene docker](#levantar-el-proyecto-si-se-tiene-docker)
 2. [Levantar el proyecto usando virtualenv](#Levantar-el-proyecto-usando-virtualenv)
+3. [Ejecucion_de_pruebas_unitarias](#Ejecucion-de-pruebas-unitarias)
+4. [Mejoras_de_performance](#Mejoras-de-performance)
 
 ## Levantar el proyecto si se tiene docker
 
@@ -26,7 +28,10 @@
 #### 4. Nos metemos a la carpeta reservamos y se debe de encontrar el archivo manage.py y lo ejecutamos
 `python manage.py runserver`
 
+## Ejecucion de todas las pruebas unitarias
+`pytest`
 
+## Mejoras de performance
 
 #### Tiempo de ejecución sin metodos asincronos.
 `13.45 segundos`
