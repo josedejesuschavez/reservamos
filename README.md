@@ -1,13 +1,13 @@
 # Documentación de Reservamos
 
-1. [Modificar API Key del proyecto](#1-Modificar-API-Key-del-proyecto)
+1. [Modificar API Key del proyecto](#1-modificar-api-key-del-proyecto)
 2. [Levantar el proyecto el local si se tiene docker](#2-levantar-el-proyecto-si-se-tiene-docker)
-3. [Levantar el proyecto usando virtualenv](#3-Levantar-el-proyecto-usando-virtualenv)
-4. [Ejecucion de pruebas unitarias](#4-Ejecucion-de-pruebas-unitarias)
-5. [Endpoints disponibles](#5-Endpoints-disponibles)
-   - [Obtener varios lugares con match](#Obtener-varios-lugares-con-match)
-   - [Obtener el lugar con mejor match](#Obtener-el-lugar-con-mejor-match)
-6. [Mejoras de performance](#6-Mejoras-de-performance)
+3. [Levantar el proyecto usando virtualenv](#3-levantar-el-proyecto-usando-virtualenv)
+4. [Ejecucion de pruebas unitarias](#4-ejecucion-de-todas-las-pruebas-unitarias)
+5. [Endpoints disponibles](#5-endpoints-disponibles)
+   - [Obtener varios lugares con match](#obtener-varios-lugares-con-match)
+   - [Obtener el lugar con mejor match](#obtener-el-lugar-con-mejor-match)
+6. [Mejoras de performance](#6-mejoras-de-performance)
 
 ---
 
