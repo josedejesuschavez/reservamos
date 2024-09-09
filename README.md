@@ -44,11 +44,18 @@ Se tiene que modificar el archivo settings.py y buscar la siguiente variable y c
 ---
 
 ## 4. Ejecucion de todas las pruebas unitarias
+
+Ejecutar todas las pruebas unitarias
 `pytest`
 
 
+Ejecutar la prueba test_happy_path
 `pytest weather/tests/test_get_wather_by_name.py::test_happy_path`
+
+Ejecutar la prueba test_not_return_data_places_api
 `pytest weather/tests/test_get_wather_by_name.py::test_not_return_data_places_api`
+
+Ejecutar la prueba test_not_return_data_weather_api
 `pytest weather/tests/test_get_wather_by_name.py::test_not_return_data_weather_api`
 
 
