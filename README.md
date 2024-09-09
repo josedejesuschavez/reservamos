@@ -2,9 +2,11 @@
 
 1. [Levantar el proyecto el local si se tiene docker](#levantar-el-proyecto-si-se-tiene-docker)
 2. [Levantar el proyecto usando virtualenv](#Levantar-el-proyecto-usando-virtualenv)
-3. [Ejecucion_de_pruebas_unitarias](#Ejecucion-de-pruebas-unitarias)
-4. [Endpoints_disponibles](#Endpoints-disponibles)
-5. [Mejoras_de_performance](#Mejoras-de-performance)
+3. [Ejecucion de pruebas unitarias](#Ejecucion-de-pruebas-unitarias)
+4. [Endpoints disponibles](#Endpoints-disponibles)
+   - [Obtener varios lugares con match](#Obtener-varios-lugares-con-match)
+   - [Obtener el lugar con mejor match](#Obtener-el-lugar-con-mejor-match)
+6. [Mejoras de performance](#Mejoras-de-performance)
 
 ## Levantar el proyecto si se tiene docker
 
@@ -34,6 +36,7 @@
 
 ## Endpoints disponibles
 
+## Obtener varios lugares con match
 ### Descripción:
 Retorna los lugares que tuvieron match
 
@@ -45,6 +48,7 @@ Retorna los lugares que tuvieron match
 curl -X GET "http://localhost:8000/api/weathers/?name=mon"
 ```
 
+## Obtener el lugar con mejor match
 ### Descripción:
 Retorna el lugar con mejor match
 
