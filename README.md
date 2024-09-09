@@ -1,12 +1,17 @@
 # Documentación de Reservamos
 
-1. [Levantar el proyecto el local si se tiene docker](#levantar-el-proyecto-si-se-tiene-docker)
-2. [Levantar el proyecto usando virtualenv](#Levantar-el-proyecto-usando-virtualenv)
-3. [Ejecucion de pruebas unitarias](#Ejecucion-de-pruebas-unitarias)
-4. [Endpoints disponibles](#Endpoints-disponibles)
+1. [Modificar API Key del proyecto](#Modificar-API-Key-del-proyecto)
+2. [Levantar el proyecto el local si se tiene docker](#levantar-el-proyecto-si-se-tiene-docker)
+3. [Levantar el proyecto usando virtualenv](#Levantar-el-proyecto-usando-virtualenv)
+4. [Ejecucion de pruebas unitarias](#Ejecucion-de-pruebas-unitarias)
+5. [Endpoints disponibles](#Endpoints-disponibles)
    - [Obtener varios lugares con match](#Obtener-varios-lugares-con-match)
    - [Obtener el lugar con mejor match](#Obtener-el-lugar-con-mejor-match)
 6. [Mejoras de performance](#Mejoras-de-performance)
+
+## Modificar API Key del proyecto
+Se tiene que modificar el archivo settings.py y buscar la siguiente variable y cambiarla por tu API Key
+```API_KEY_OPEN_WEATHER = 'a5a47c18197737e8eeca634cd6acb581'```
 
 ## Levantar el proyecto si se tiene docker
 
