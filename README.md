@@ -3,10 +3,10 @@
 1. [Levantar el proyecto el local si se tiene docker](#levantar-el-proyecto-si-se-tiene-docker)
 2. [Segundo apartado](#levantar-el-proyecto-si-se-tiene-docker)
 
-## Levantar el proyecto si se tiene docker<a name="id1"></a>
+## Levantar el proyecto si se tiene docker
 Texto del primer apartado
 
-## Segundo apartado<a name="id2"></a>
+## Segundo apartado
 Texto del segundo apartado
 
 #### Si se tiene docker instalado en la maquina se puede ejecutar con el siguiente comando:
